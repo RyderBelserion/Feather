@@ -42,7 +42,7 @@ abstract class PatchTask : DefaultTask() {
             patchFolder.mkdirs()
         }
 
-        FileUtil.getUpstream(directory, workspace, feather.upstream.autoUpstream, feather.upstream.url, feather.upstream.sha)
+        FileUtil.getUpstream(directory, workspace, feather.upstream.autoUpstream, feather.upstream.url, feather.upstream.sha, feather.upstream.branch)
 
         FileUtil.applyPatches(workspace, patchFolder)
     }

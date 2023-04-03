@@ -10,6 +10,8 @@ abstract class PatcherExtension {
     private var url: String = ""
     private var autoupdate: Boolean = false
 
+    private var branch: String = ""
+
     /**
      * Sets the root folder.
      */
@@ -38,6 +40,20 @@ abstract class PatcherExtension {
         return this.sha
     }
 
+    /**
+     * Sets the branch name
+     */
+    fun branch(name: String) {
+        this.branch = name
+    }
+
+    /**
+     * Gets the branch name
+     */
+    fun branch(): String {
+        return this.branch
+    }
+
     fun autoupdate(autoupdate: Boolean) {
         this.autoupdate = autoupdate
     }
@@ -63,7 +79,7 @@ abstract class PatcherExtension {
     internal fun build(): Extension {
         return Extension(
             Plugin(this.datafolder, this.workspace),
-            Upstream(this.sha, this.autoupdate, this.url)
+            Upstream(this.sha, this.autoupdate, this.url, this.branch)
         )
     }
 
@@ -80,6 +96,7 @@ abstract class PatcherExtension {
     data class Upstream(
         val sha: String,
         val autoUpstream: Boolean,
-        val url: String
+        val url: String,
+        val branch: String
     )
 }

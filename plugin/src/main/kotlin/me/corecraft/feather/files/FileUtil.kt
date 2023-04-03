@@ -8,7 +8,7 @@ import kotlin.system.exitProcess
 
 object FileUtil {
 
-    fun getUpstream(directory: File, workspace: File, toggle: Boolean, url: String, sha: String) {
+    fun getUpstream(directory: File, workspace: File, toggle: Boolean, url: String, sha: String, branch: String) {
         val upstream = File("$directory/upstream")
 
         upstream.delete()
@@ -17,6 +17,11 @@ object FileUtil {
         shellRun(upstream) {
             println("[Feather] Cloning into '${upstream.name}'...")
             git.clone(url, upstream.absolutePath)
+
+            if (branch.isNotEmpty()) {
+                println("[Feather] Checking out $branch directly after clone.")
+                git.gitCommand(listOf("switch", branch))
+            }
 
             val id: String = if (toggle) {
                 git.gitCommand(listOf("show", "-s", "--format=%H"))
