@@ -14,6 +14,8 @@ dependencies {
 
 tasks {
     shadowJar {
+        archiveBaseName.set("${rootProject.name}-${rootProject.version}")
+
         archiveClassifier.set("")
     }
 }
@@ -33,13 +35,7 @@ publishing {
     repositories {
         maven("https://repo.crazycrew.us/api") {
             name = "crazycrew"
-            // Used for locally publishing.
             credentials(PasswordCredentials::class)
-
-            credentials {
-                username = System.getenv("REPOSITORY_USERNAME")
-                password = System.getenv("REPOSITORY_PASSWORD")
-            }
         }
     }
 

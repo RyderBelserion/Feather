@@ -11,3 +11,5 @@ shadow = { module = "com.github.johnrengelman:shadow", version = "8.1.0" }
 
 # Misc
 jetbrains = { module = "org.jetbrains:annotations", version = "23.0.0" }
+
+turtle = { module = "com.lordcodes.turtle:turtle", version = "0.8.0" }

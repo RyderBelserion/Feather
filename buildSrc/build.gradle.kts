@@ -12,4 +12,6 @@ dependencies {
     implementation(libs.gradle.plugin.publish)
 
     implementation(libs.shadow)
+
+    implementation(libs.turtle)
 }

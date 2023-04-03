@@ -10,6 +10,8 @@ pluginManagement {
     }
 }
 
+rootProject.name = "Feather"
+
 val lowerCase = rootProject.name.lowercase()
 
 listOf("plugin").forEach(::includeProject)
