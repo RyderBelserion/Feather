@@ -19,6 +19,7 @@ gradlePlugin {
             displayName = "Feather"
             description = "A git wrapper to create patches much like Paperweight by PaperMC"
             implementationClass = "me.corecraft.feather.FeatherPlugin"
+            version = rootProject.version
         }
     }
 }
