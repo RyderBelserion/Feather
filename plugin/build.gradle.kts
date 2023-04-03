@@ -4,14 +4,6 @@ plugins {
     `maven-publish`
 }
 
-repositories {
-
-}
-
-dependencies {
-
-}
-
 tasks {
     shadowJar {
         archiveBaseName.set("${rootProject.name}-${rootProject.version}")
