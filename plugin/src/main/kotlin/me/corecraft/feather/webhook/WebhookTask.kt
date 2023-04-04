@@ -29,7 +29,7 @@ abstract class WebhookTask : DefaultTask() {
     fun feather() {
         val feather = extension
 
-        val url = feather.url()
+        val url = System.getenv(feather.url())
 
         runBlocking(Dispatchers.IO) {
             val response = client.post(url) {
