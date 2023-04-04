@@ -4,9 +4,11 @@ import me.corecraft.feather.git.Patcher
 import me.corecraft.feather.git.PatcherExtension
 import me.corecraft.feather.git.tasks.RebuildTask
 import me.corecraft.feather.git.tasks.PatchTask
+import me.corecraft.feather.webhook.WebhookTask
 import org.gradle.api.Plugin
 import org.gradle.api.Project
 import org.gradle.kotlin.dsl.register
+import task.WebhookExtension
 
 class FeatherPlugin : Plugin<Project> {
 
@@ -15,7 +17,9 @@ class FeatherPlugin : Plugin<Project> {
 
         Patcher().gitExists()
 
-        val patcher = extensions.create("feather", PatcherExtension::class.java)
+        val patcher = extensions.create("patcher", PatcherExtension::class.java)
+
+        val webhook = extensions.create("webhook", WebhookExtension::class.java)
 
         // The task that clones and sets up all our necessary folders for the first time.
         project.tasks.register<PatchTask>("applyPatches") {
@@ -29,6 +33,12 @@ class FeatherPlugin : Plugin<Project> {
             group = "feather"
 
             extension = patcher
+        }
+
+        project.tasks.register<WebhookTask>("webhook") {
+            group = "feather"
+
+            extension = webhook
         }
     }
 }

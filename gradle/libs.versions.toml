@@ -13,3 +13,11 @@ shadow = { module = "com.github.johnrengelman:shadow", version = "8.1.0" }
 jetbrains = { module = "org.jetbrains:annotations", version = "23.0.0" }
 
 turtle = { module = "com.lordcodes.turtle:turtle", version = "0.8.0" }
+
+# Kotlin
+ktor-core = { module = "io.ktor:ktor-client-core-jvm", version.ref = "ktor" }
+ktor-cio = { module = "io.ktor:ktor-client-cio-jvm", version.ref = "ktor" }
+ktor-content = { module = "io.ktor:ktor-client-content-negotiation", version.ref = "ktor" }
+ktor-gson = { module = "io.ktor:ktor-serialization-gson", version.ref = "ktor" }
+
+kotlin-coroutines = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version = "1.6.4" }

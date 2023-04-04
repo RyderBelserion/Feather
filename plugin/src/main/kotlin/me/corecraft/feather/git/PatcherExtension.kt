@@ -15,8 +15,10 @@ abstract class PatcherExtension {
     /**
      * Sets the root folder.
      */
-    fun datafolder(datafolder: Path) {
+    fun datafolder(datafolder: Path): PatcherExtension {
         this.datafolder = datafolder
+
+        return this
     }
 
     /**

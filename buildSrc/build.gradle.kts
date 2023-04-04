@@ -13,5 +13,10 @@ dependencies {
 
     implementation(libs.shadow)
 
+    implementation(libs.ktor.core)
+    implementation(libs.ktor.cio)
+    implementation(libs.ktor.content)
+    implementation(libs.ktor.gson)
+
     implementation(libs.turtle)
 }
