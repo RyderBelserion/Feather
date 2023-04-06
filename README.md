@@ -1,2 +1,2 @@
 # Feather
-A git wrapper to create patches much like Paperweight by PaperMC
+A neat little gradle plugin with anything I need.
