@@ -1,7 +1,7 @@
-package me.corecraft.feather.git.tasks
+package com.ryderbelserion.feather.git.tasks
 
-import me.corecraft.feather.files.FileUtil
-import me.corecraft.feather.git.PatcherExtension
+import com.ryderbelserion.feather.files.FileUtil
+import com.ryderbelserion.feather.git.PatcherExtension
 import org.gradle.api.DefaultTask
 import org.gradle.api.tasks.Input
 import org.gradle.api.tasks.TaskAction

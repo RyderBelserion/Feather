@@ -1,4 +1,4 @@
-package me.corecraft.feather.git
+package com.ryderbelserion.feather.git
 
 import java.nio.file.Path
 

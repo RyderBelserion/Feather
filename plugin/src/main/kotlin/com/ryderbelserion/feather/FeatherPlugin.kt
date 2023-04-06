@@ -1,10 +1,10 @@
-package me.corecraft.feather
+package com.ryderbelserion.feather
 
-import me.corecraft.feather.git.Patcher
-import me.corecraft.feather.git.PatcherExtension
-import me.corecraft.feather.git.tasks.RebuildTask
-import me.corecraft.feather.git.tasks.PatchTask
-import me.corecraft.feather.webhook.WebhookTask
+import com.ryderbelserion.feather.git.Patcher
+import com.ryderbelserion.feather.git.PatcherExtension
+import com.ryderbelserion.feather.git.tasks.RebuildTask
+import com.ryderbelserion.feather.git.tasks.PatchTask
+import com.ryderbelserion.feather.webhook.WebhookTask
 import org.gradle.api.Plugin
 import org.gradle.api.Project
 import org.gradle.kotlin.dsl.register

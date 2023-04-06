@@ -1,4 +1,4 @@
-package me.corecraft.feather.files
+package com.ryderbelserion.feather.files
 
 import com.lordcodes.turtle.shellRun
 import java.io.File

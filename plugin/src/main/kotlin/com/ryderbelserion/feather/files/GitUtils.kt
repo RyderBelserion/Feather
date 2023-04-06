@@ -1,4 +1,4 @@
-package me.corecraft.feather.files
+package com.ryderbelserion.feather.files
 
 import java.io.BufferedReader
 import java.io.File

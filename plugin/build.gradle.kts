@@ -17,8 +17,8 @@ gradlePlugin {
         create("feather") {
             id = "featherpatcher"
             displayName = "Feather"
-            description = "A git wrapper to create patches much like Paperweight by PaperMC"
-            implementationClass = "me.corecraft.feather.FeatherPlugin"
+            description = "A neat little gradle plugin with anything I need."
+            implementationClass = "com.ryderbelserion.feather.FeatherPlugin"
             version = rootProject.version
         }
     }
