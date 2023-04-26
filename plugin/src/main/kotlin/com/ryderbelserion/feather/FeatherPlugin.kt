@@ -1,5 +1,6 @@
 package com.ryderbelserion.feather
 
+import com.lordcodes.turtle.shellRun
 import com.ryderbelserion.feather.git.Patcher
 import com.ryderbelserion.feather.git.PatcherExtension
 import com.ryderbelserion.feather.git.tasks.RebuildTask
@@ -41,4 +42,11 @@ class FeatherPlugin : Plugin<Project> {
             extension = webhook
         }
     }
+}
+
+fun main() {
+    val hash = shellRun("git", listOf("rev-parse", "--short", "origin/main"))
+    val end = shellRun("git", listOf("rev-parse", "--short", "HEAD@{21.days.ago}"))
+
+    println(Patcher().gitFormat(Patcher().gitHistory(end, hash), "ryder", "example", "\n"))
 }
