@@ -43,10 +43,3 @@ class FeatherPlugin : Plugin<Project> {
         }
     }
 }
-
-fun main() {
-    val hash = shellRun("git", listOf("rev-parse", "--short", "origin/main"))
-    val end = shellRun("git", listOf("rev-parse", "--short", "HEAD@{21.days.ago}"))
-
-    println(Patcher().gitFormat(Patcher().gitHistory(end, hash), "ryder", "example", "\n"))
-}
