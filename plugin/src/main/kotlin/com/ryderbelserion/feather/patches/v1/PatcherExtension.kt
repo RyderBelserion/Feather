@@ -1,4 +1,4 @@
-package com.ryderbelserion.feather.git
+package com.ryderbelserion.feather.patches.v1
 
 import java.nio.file.Path
 

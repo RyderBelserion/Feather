@@ -1,7 +1,7 @@
-package com.ryderbelserion.feather.git.tasks
+package com.ryderbelserion.feather.patches.tasks
 
-import com.ryderbelserion.feather.files.FileUtil
-import com.ryderbelserion.feather.git.PatcherExtension
+import com.ryderbelserion.feather.utils.FileUtil
+import com.ryderbelserion.feather.patches.v1.PatcherExtension
 import org.gradle.api.DefaultTask
 import org.gradle.api.tasks.Input
 import org.gradle.api.tasks.TaskAction
@@ -42,8 +42,7 @@ abstract class PatchTask : DefaultTask() {
             patchFolder.mkdirs()
         }
 
-        FileUtil.getUpstream(directory, workspace, feather.upstream.autoUpstream, feather.upstream.url, feather.upstream.sha, feather.upstream.branch)
-
-        FileUtil.applyPatches(workspace, patchFolder)
+        FileUtil().getUpstream(directory, workspace, feather.upstream.autoUpstream, feather.upstream.url, feather.upstream.sha, feather.upstream.branch)
+        FileUtil().applyPatches(workspace, patchFolder)
     }
 }

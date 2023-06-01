@@ -1,4 +1,4 @@
-package com.ryderbelserion.feather.files
+package com.ryderbelserion.feather.utils
 
 import com.lordcodes.turtle.shellRun
 import java.io.File
@@ -6,7 +6,7 @@ import java.util.*
 import java.util.stream.Collectors
 import kotlin.system.exitProcess
 
-object FileUtil {
+class FileUtil {
 
     fun getUpstream(directory: File, workspace: File, toggle: Boolean, url: String, sha: String, branch: String) {
         val upstream = File("$directory/upstream")
@@ -66,7 +66,7 @@ object FileUtil {
         patches.forEach {
             println("Applying $it")
 
-            val fail: Boolean = GitUtils.runGitCommandCheckFail(
+            val fail: Boolean = GitUtils().gitCommand(
                 workspace, arrayOf(
                     "git", "am", "--3way",
                     "--ignore-whitespace", File(patchFolder, it).absolutePath
