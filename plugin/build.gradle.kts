@@ -4,6 +4,8 @@ plugins {
     `maven-publish`
 }
 
+val javaComponent: SoftwareComponent = components["java"]
+
 tasks {
     val sourcesJar by creating(Jar::class) {
         archiveClassifier.set("sources")
@@ -52,5 +54,3 @@ gradlePlugin {
         }
     }
 }
-
-val javaComponent: SoftwareComponent = components["java"]
